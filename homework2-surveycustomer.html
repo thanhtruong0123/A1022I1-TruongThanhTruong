@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework2 Survey Customer</title>
+
+</head>
+<body>
+    <form>
+        <h1> Market Research Survey </h1>
+        <p> Please take a few moments to complete this satisfaction survey </p>
+        <b> what is your age range?</b> <br/>
+        <select style="width: 400px;">
+            <option> 18-24 </option>
+            <option> 11-17 </option>
+            <option> 25-31 </option>
+            <option> 32-38 </option>
+        </select> <br/>
+        <br/>
+        <b> What is your yearly income range? </b> <br/>
+        <select style="width: 400px;">
+            <option> $0 - $25,000 </option>
+            <option> $25,000 - $50,000 </option>
+            <option> $50,000 - $75,000 </option>
+            <option> $75,000 - $1,000,000 </option>
+        </select> <br/>
+        <br/>
+        <b> Gender </b> <br/>
+        <input type="radio" name="gender" value="Male"> Male <br/>
+        <input type="radio" name="gender" value="Female"> Female <br/>
+        <br/>
+        <b> Which of the following products have your purchased in the last 2 months. Please check all that aplly </b> <br/>
+        <input type="checkbox" name="product" value="Product 1"> Product 1 <br/>
+        <input type="checkbox" name="product" value="Product 2"> Product 2 <br/>
+        <input type="checkbox" name="product" value="Product 3"> Product 3 <br/>
+        <br/>
+        <b> How often would you use our product? </b> <br/>
+        <input type="radio" name="time"> Daily <br/>
+        <input type="radio" name="time"> Weekly <br/>
+        <input type="radio" name="time"> Monthly <br/>
+        <br/>
+        <b> What would you pay for the new product? </b> <br/>
+            <table>
+                <tr>
+                    <td> $ </td>
+                    <td>
+                        <input type="text" style="width: 75px;">
+                    </td>
+                    <td> . </td>
+                    <td>
+                        <input type="text" style="width: 20px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td style="font-size: small"> Dollars </td>
+                    <td> </td>
+                    <td style="font-size: small;"> Cents </td>
+                </tr>
+            </table>
+        <br/>
+        <b> What features would you like to see in the new froduct. </b> <br/>
+        <textarea cols="100" rows="7"> </textarea>
+        <br/>
+        <p> Please rare your level of agreement with the following statements. </p>
+        <table style="border:1px solid black;">
+            <tr style="background-color: #E6E6E5">
+                <td > </td>
+                <td style="width: 150px; text-align: center;"> Strong Disagree </td>
+                <td style="width: 150px; text-align: center;"> Disagree </td>
+                <td style="width: 150px; text-align: center;"> Agree </td>
+                <td style="width: 150px; text-align: center;"> Strong Agree </td>
+            </tr>
+            <tr>
+                <th style="text-align: left;"> Our products are priced fairly. </th>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="1"> <br/>
+                    <span style="font-size: x-small;"t> 1 </span>
+                </td>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="2"> <br/>
+                    <span style="font-size: x-small;"t> 2 </span>
+                </td>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="3"> <br/>
+                    <span style="font-size: x-small;"t> 3 </span>
+                </td>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="4"> <br/>
+                    <span style="font-size: x-small;"t> 4 </span>
+                </td>
+            </tr>
+            <tr style="background-color: #F5F6F6">
+                <th style="text-align: left;"> Our products are high quality. </th>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="1"> <br/>
+                    <span style="font-size: x-small;"t> 1 </span>
+                </td>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="2"> <br/>
+                    <span style="font-size: x-small;"t> 2 </span>
+                </td>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="3"> <br/>
+                    <span style="font-size: x-small;"t> 3 </span>
+                </td>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="4"> <br/>
+                    <span style="font-size: x-small;"t> 4 </span>
+                </td>
+            </tr>
+            <tr>
+                <th style="text-align: left;"> You would recommend our product to a friend or coworker. </th>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="1"> <br/>
+                    <span style="font-size: x-small;"t> 1 </span>
+                </td>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="2"> <br/>
+                    <span style="font-size: x-small;"t> 2 </span>
+                </td>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="3"> <br/>
+                    <span style="font-size: x-small;"t> 3 </span>
+                </td>
+                <td style="text-align: center;">
+                    <input type="radio" name="opinion" value="4"> <br/>
+                    <span style="font-size: x-small;"t> 4 </span>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <input type="submit" name="submit" value="submit">
+    </form>
+</body>
+</html>
