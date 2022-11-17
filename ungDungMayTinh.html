@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h2> Caculator </h2>
+    <input type="text" style="width:200px" id="input1">
+    <input type="text" style="width:200px" id="input2"> <br>
+    <button type="button" onclick="add()"> Addition(+) </button>
+    <button type="button" onclick="plus()"> Subtraction(-) </button>
+    <button type="button" onclick="multi()"> Multiplication(x) </button>
+    <button type="button" onclick="per()"> Devision(/) </button>
+    <div id="result1"></div>
+</body>
+    <script>
+        function add(){
+            var data1 = +document.getElementById("input1").value;
+            var data2 = +document.getElementById("input2").value;
+            var result = data1 + data2;
+                document.getElementById("result1").innerHTML =  result;
+        }
+        function plus(){
+            var data1 = +document.getElementById("input1").value;
+            var data2 = +document.getElementById("input2").value;
+            var result = data1 - data2;
+            document.getElementById("result1").innerHTML =  result;
+        }
+        function multi(){
+            var data1 = +document.getElementById("input1").value;
+            var data2 = +document.getElementById("input2").value;
+            var result = data1 * data2;
+            document.getElementById("result1").innerHTML =  result;
+        }
+        function per(){
+            var data1 = +document.getElementById("input1").value;
+            var data2 = +document.getElementById("input2").value;
+            var result = data1 / data2;
+            document.getElementById("result1").innerHTML =  result;
+        }
+    </script>
+</html>

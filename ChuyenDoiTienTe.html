@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td style="text-align: center; width: 150px;">
+                <b> Amount </b>
+            </td>
+            <td style="text-align: center; width: 50px;"></td>
+            <td style="text-align: center; width: 150px;">
+                <b> From Curency </b>
+            </td>
+            <td style="text-align: center; width: 50px;"></td>
+            <td style="text-align: center; width: 150px;">
+                <b> To Curency  </b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="inputMoney">
+            </td>
+            <td></td>
+            <td>
+                <select style="width: 150px" id="fromC">
+                    <option value="vietnam">VietNam</option>
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                </select>
+            </td>
+            <td></td>
+            <td>
+                <select style="width: 150px" id="toC">
+                    <option value="usd">USD</option>
+                    <option value="vietnam">VietNam</option>
+                    <option value="eur">EUR</option>
+                </select>
+            </td>
+            <td style="text-align: center; width: 50px;"></td>
+            <td>
+                <button type="button" onclick="showMessage();" style="color:white;background-color:#9081bd; border-color:#9fb8e0; width:100px">Convert</button>
+            </td>
+        </tr>
+    </table>
+</body>
+    <script>
+        let fromCur;
+        let toCur;
+        let amount;
+        function showMessage(){
+            amount = +document.getElementById("inputMoney").value;
+            fromCur = document.getElementById("fromC").value;
+            toCur = document.getElementById("toC").value;
+            if (fromCur == toCur) {
+                document.write('Thành tiền là:' + amount);
+            }
+            if (fromCur == "vietnam" && toCur == "usd" ){
+                    document.write('Thành tiền là:' + amount*23000);
+                }
+            if (fromCur == "vietnam" && toCur == "" ){
+                    document.write('Thành tiền là:' + amount*25000);
+                }
+            if (fromCur = "usd" && toCur == "vietnam"){
+                    document.write('Thành tiền là:' + amount/23000);
+                }
+            if (fromCur = "usd" && toCur == "eur") {
+                    document.write('Thành tiền là:' + amount*0.97);
+                }
+            if (fromCur == "eur" && toCur == "vietnam") {
+                    document.write('Thành tiền là:' + amount/25000);
+                }
+            if (fromCur == "eur" && toCur == "usd"){
+                    document.write('Thành tiền là:' + amount/0.97);
+                }
+        }
+    </script>
+</html>
