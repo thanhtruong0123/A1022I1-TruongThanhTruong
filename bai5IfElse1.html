@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5IfElse1</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let lastTest = +prompt("Nhập số điểm cuối kỳ");
+        let middleTest = +prompt("Nhập số điểm giữa kỳ");
+        let normalTest = +prompt("Nhập số điểm");
+        let average = (normalTest + 2*middleTest + 3*lastTest)/6
+        if (average < 3.5) {
+            alert("Học lực loại kém");
+        } else if(average<5 && normalTest>=2) {
+            alert("Học lực loại yếu");
+        } else if(average<6.5 && normalTest>=5) {
+            alert("Học lực trung bình");
+        } else if(average<8 && normalTest>=6.5) {
+            alert("Học lực khá")
+        } else {
+            alert("Học lực giỏi")
+        }
+    </script>
+</html>
