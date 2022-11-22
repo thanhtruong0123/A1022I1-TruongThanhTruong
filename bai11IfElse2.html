@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai11IfElse2</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let income = +prompt("Thu nhập của bạn là: ");
+        if (income <= 5) {
+            var level = 1;
+            var tax = income*(5/100);
+        } else if (income <= 10) {
+            var level = 2;
+            var  tax = income*(10/100) - 0.25;
+        } else if (income <= 18) {
+            var level = 3;
+            var  tax = income*(15/100) - 0.75;
+        } else if (income <= 32) {
+            var level = 4;
+            var  tax = income*(20/100) - 1.65;
+        } else if (income <= 52) {
+            var level = 5;
+            var  tax = income*(25/100) - 3.25;
+        } else if (income <= 80) {
+            var level = 6;
+            var  tax = income*(30/100) - 5.85;
+        } else {
+            var level = 7;
+            var tax = income * (35 / 100) - 9.85;
+        }
+        alert("Bạn đang có mức thu nhập bậc " + level + " và số tiền cần đóng là " + tax + " triệu đồng");
+
+    </script>
+</html>

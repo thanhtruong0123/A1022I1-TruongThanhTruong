@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7IfElse2</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let a = +prompt("Nhập tham số a: ");
+        let b = +prompt("Nhập tham số b: ");
+        let c = +prompt("Nhập tham số c: ");
+        let delta = Math.pow(b,2)-4*a*c;
+        let xdouble = (-b)/(2*a);
+        let x1 = ((-b)+Math.sqrt(delta))/(2*a);
+        let x2 = ((-b)-Math.sqrt(delta))/(2*a);
+
+        if(delta<0) {
+            alert("Phương trình vô nghiệm");
+        } else if(delta=0) {
+            alert("Phương trình có nghiệm kép: " +xdouble);
+        } else {
+            alert("Phương trình có nghiệm: " + x1 + x2);
+        }
+    </script>
+</html>

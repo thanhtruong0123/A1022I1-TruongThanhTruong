@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai12IfElse2</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let originalMoney = +prompt("Nhập số tiền gốc: ");
+        let interestRate = +prompt("Nhập số lãi suất hằng tháng");
+        let month = +prompt("Số tháng cho vay");
+        let interest = (originalMoney * ( Math.pow((1 + interestRate),month))) - originalMoney;
+        alert("Số tiền lãi bạn nhận được là: " + interest + " đồng")
+    </script>
+</html>

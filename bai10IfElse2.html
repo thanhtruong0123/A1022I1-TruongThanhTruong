@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai10IfElse2</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let electric = +prompt("Nhập số điện bạn đã dùng vào (kWh")
+        if (electric>=0 && electric<=50) {
+            var level = 1;
+            var money = electric*1678;
+        }
+        if (electric>=51 && electric<=100) {
+            var level = 2;
+            var money = electric*1734;
+        }
+        if (electric>=101 && electric<=200) {
+            var level = 3;
+            var money = electric*2014;
+        }
+        if (electric>=201 && electric<=300) {
+            var level = 4;
+            var money = electric*2536;
+        }
+        if (electric>=301 && electric<=400) {
+            var level = 5;
+            var money = electric*2834;
+        }
+        if (electric>=401) {
+            var level = 6;
+            var money = electric*2927;
+        }
+        alert("Bạn đang dùng mức điện bậc " + level +
+        " và số tiền bạn phải đóng là " + money + " đồng");
+
+    </script>
+</html>
