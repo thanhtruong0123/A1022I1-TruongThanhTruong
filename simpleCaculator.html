@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simpleCaculator</title>
+    <style>
+        input[type=button] {
+            width: 50px;
+            height: 50px;
+            color: blue;
+            background-color: white;
+            font-size: 20px;
+            border-color : silver
+        }
+    </style>
+</head>
+<body>
+    <table style="border-spacing: 20px; color: blue">
+        <tr>
+            <td colspan="7" style="border: 1px solid; border-collapse: collapse; height: 50px; width: 300px">
+                <div id="result"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="one" onclick="clickOne()" value="1">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="two" onclick="clickTwo()" value="2">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="three" onclick="clickThree()" value="3">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="add" onclick="clickAdd()" value="+">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="four" onclick="clickFour()" value="4">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="five" onclick="clickFive()" value="5">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="six" onclick="clickSix()" value="6">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="subtract" onclick="clickSubtract()" value="-">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="seven" onclick="clickSeven()" value="7"">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="eight" onclick="clickEight()" value="8">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="nine" onclick="clickNine()" value="9">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="multi" onclick="clickMulti()" value="x">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="clear" onclick="clickClear()" value="C"">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="zero" onclick="clickZero()" value="0">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="equal" onclick="clickEqual()" value="=">
+            </td>
+            <td> </td>
+            <td>
+                <input type="button" id="divis" onclick="clickDevis()" value="/">
+            </td>
+        </tr>
+    </table>
+</body>
+    <script>
+        let value1;
+        let value2;
+        let caculation;
+
+        function clickOne() {
+            var firstInput = 1;
+        }
+        function clickTwo() {
+            var firstInput = 2;
+        }
+        function clickThree() {
+            var firstInput = 3;
+        }
+        function clickFour() {
+            var firstInput = 4;
+        }
+        function clickFive() {
+            var firstInput = 5;
+        }
+        function clickSix() {
+            var firstInput = 6;
+        }
+        function clickSeven() {
+            var firstInput = 7;
+        }
+        function clickEight() {
+            var firstInput = 8;
+        }
+        function clickNine() {
+            var firstInput = 9;
+        }
+
+        switch(firstInput) {
+            case 1:
+                value1 = 1;
+                break;
+            case 2:
+                value1 = 2
+                break;
+            case 3:
+                value1 = 3
+                break;
+            case 4:
+                value1 = 4
+                break;
+            case 5:
+                value1 = 5
+                break;
+            case 6:
+                value1 = 6
+                break;
+            case 7:
+                value1 = 7
+                break;
+            case 8:
+                value1 = 8
+                break;
+            default:
+                value1 = 9
+                break;
+        }
+
+        function clickAdd() {
+            var secondClick = "+";
+        }
+        function clickSubtract() {
+            var secondClick = "-";
+        }
+        function clickMulti() {
+            var secondClick = "";
+        }
+        function clickDevis() {
+            var secondClick = "/";
+        }
+
+        switch(secondClick) {
+            case "+":
+                caculation = "+"
+                break;
+            case "-":
+                caculation = "-"
+                break;
+            case "x":
+                caculation = "*"
+                break;
+            default:
+                caculation = "/"
+                break;
+        }
+
+        function clickOne() {
+            var thirdInput = 1;
+        }
+        function clickTwo() {
+            var thirdInput = 2;
+        }
+        function clickThree() {
+            var thirdInput = 3;
+        }
+        function clickFour() {
+            var thirdInput = 4;
+        }
+        function clickFive() {
+            var thirdInput = 5;
+        }
+        function clickSix() {
+            var thirdInput = 6;
+        }
+        function clickSeven() {
+            var thirdInput = 7;
+        }
+        function clickEight() {
+            var thirdInput = 8;
+        }
+        function clickNine() {
+            var thirdInput = 9;
+        }
+
+        switch(thirdInput) {
+            case 1:
+                value2 = 1;
+                break;
+            case 2:
+                value2 = 2
+                break;
+            case 3:
+                value2 = 3
+                break;
+            case 4:
+                value2 = 4
+                break;
+            case 5:
+                value2 = 5
+                break;
+            case 6:
+                value2 = 6
+                break;
+            case 7:
+                value2 = 7
+                break;
+            case 8:
+                value2 = 8
+                break;
+            default:
+                value2 = 9
+                break;
+        }
+
+        function clickEqual() {
+            var lastResult = document.getElementById(result).innerHTML = value1 + caculation + value2
+        }
+
+    </script>
+</html>
