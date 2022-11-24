@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let integer = +prompt("Nhập số lượng số nguyên tố bạn muốn in ra:");
+        let count = 0;
+
+        for (let i = 2; ; i++) {
+            let testNum = 0;
+            for (let j = 1; j <= i ; j++) {
+                if(i%j == 0) {
+                    testNum++;
+                }
+            }
+            if (testNum == 2) {
+                count++
+                document.write(i + "</br>");
+                if (count == integer) {
+                    break;
+                }
+            }
+        }
+
+    </script>
+</html>

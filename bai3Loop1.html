@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let checkNum = 2;
+    let i = 1;
+    let j = 1;
+
+    do {
+        document.write(i + "<br/>");
+        document.write(j + "<br/>");
+        i = i + j;
+        checkNum++;
+        j = i + j;
+        checkNum++;
+    } while (checkNum !== 20);
+
+</script>
+</html>

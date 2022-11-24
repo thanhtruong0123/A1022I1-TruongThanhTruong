@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+    <script>
+        let checkNum = 2;
+        let i = 1;
+        let j = 1;
+        total = 0;
+
+        do {
+            total += i;
+            total += j;
+            i = i + j;
+            checkNum++;
+            j = i + j;
+            checkNum++;
+        } while (checkNum !== 20);
+        document.write("Tổng 20 số đầu tiên trong dãy fibonacci là: " + total);
+    </script>
+</html>
