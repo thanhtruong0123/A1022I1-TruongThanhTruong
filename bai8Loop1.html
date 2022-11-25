@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button type="button" onclick="playGame()"> PLAY </button>
+</body>
+<script>
+    let fromNum;
+    let toNum;
+    let guestNum;
+    let checkNum;
+
+    function playGame() {
+        fromNum = +prompt("Nhập khoảng số bạn muốn đoán BẮT ĐẦU là:");
+        toNum = +prompt("Nhập khoảng số bạn muốn đoán KẾT THÚC là:");
+        guestNum = +prompt("Nhập số bạn ĐOÁN là:");
+
+        checkNum = Math.floor(Math.random()* toNum) + fromNum;
+
+        for (;  ;) {
+            if (guestNum < checkNum) {
+                alert("Số bạn đoán BÉ HƠN đáp án.");
+            } else if (guestNum > checkNum) {
+                alert("Số bạn đoán LỚN HƠN đáp án.");
+            } else {
+                alert("CHÚC MỪNG BẠN ĐÃ ĐÚNG.");
+                break;
+            }
+            guestNum = +prompt("Nhập số bạn ĐOÁN là:");
+        }
+    }
+
+
+
+</script>
+</html>
