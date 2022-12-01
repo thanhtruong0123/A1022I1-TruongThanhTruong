@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inputArray = [];
+    let count = 0;
+
+    for (let i = 0; i < 10; i++) {
+        inputArray[i] = +prompt("Nhập giá trị của mãng tại vị trí " + i);
+    }
+    for (let i = 0; i < inputArray.length; i++) {
+        if (inputArray[i] >= 10) {
+            count++;
+        }
+    }
+    document.write(count);
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inputArray = [];
+    for (let i = 0; ; i++) {
+        let item = prompt('Nhập giá trị của mãng tại vị trí ' + i + ' (Gõ "STOP" để dừng)');
+        if (item === "STOP") {
+            break;
+        }
+        inputArray.push(parseInt(item));
+    }
+    let max = inputArray[0];
+    let total = 0;
+    for (let i = 0; i < inputArray.length; i++) {
+        if (max < inputArray[i]) {
+            max = inputArray[i];
+        }
+        total += inputArray[i];
+    }
+    document.write("Giá Trị Lớn Nhất Là: " + max + "<br/>");
+    document.write("Giá Trị Trung Bình Của Mảng là: " + total/inputArray.length);
+</script>
+</html>

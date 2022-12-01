@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> Bài 1 </h3>
+    <div id="result1" ></div>
+
+    <h3> Bài 2 </h3>
+    <div id="result2" ></div>
+
+    <h3> Bài 3 </h3>
+    <div id="result3" ></div>
+
+</body>
+    <script>
+        // Bài 1:
+        let arrayInput1 = ["Red", "Green", "White", "Black"];
+        let result1 = arrayInput1.toString();
+        document.getElementById("result1").innerHTML = result1;
+
+        // Bài 2:
+        let arrayInput2 = prompt("Nhập vào dãy số bạn muốn chèn dấu (-)");
+        let array2 = [arrayInput2[0]];
+        for (let i = 1; i < arrayInput2.length; i++) {
+            if (arrayInput2[i]%2 == 0 && arrayInput2[i-1]%2 == 0) {
+                array2.push("-");
+                array2.push(arrayInput2[i]);
+            } else {
+                array2.push(arrayInput2[i]);
+            }
+        }
+        document.getElementById("result2").innerHTML = array2.join("");
+
+        // Bài 3:
+        let arrayInput3 = prompt("Nhập vào chuỗi bạn muốn chuyển đổi HOA - THƯỜNG");
+        let array3 = [];
+        for (let i = 0; i < arrayInput3.length; i++) {
+            if (arrayInput3[i] == arrayInput3[i].toUpperCase()) {
+                array3.push(arrayInput3[i].toLowerCase());
+            } else {
+                array3.push(arrayInput3[i].toUpperCase());
+            }
+        }
+        document.getElementById("result3").innerHTML = array3.join("");
+
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inputArray = [];
+    let index;
+    for (let i = 0; i < ; i++) {
+        inputArray[i] = +prompt("Nhập giá trị của mãng tại vị trí " + i);
+    }
+    let v = +prompt("Nhập Số V Bạn Muốn Kiểm Tra");10
+    if (inputArray.includes(v)) {
+        index = inputArray.indexOf(v);
+        inputArray.splice(index, 1);
+        inputArray.push(0);
+        document.write(v + " có trong mảng" + "<br/>");
+        document.write("Mảng mới là: " + inputArray);
+    } else {
+        document.write(v + " Không có Trong Mảng");
+    }
+</script>
+</html>

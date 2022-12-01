@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> <i> Dictionary </i></h3>
+<!--    <p> Loại-->
+<!--        <select id="fromLanguage">-->
+<!--            <option value="vietnam"> Việt Nam - English </option>-->
+<!--            <option value="english"> English - Việt Nam </option>-->
+<!--        </select>-->
+<!--    </p>-->
+    <input type="text" id="originalTxt" />
+    <input type="button" onclick="translateClick()" value="Dịch" />
+    <p id="result"></p>
+</body>
+<script>
+    let arrayVietnam = ["Bò", "Heo", "Gà", "Chó", "Cá", "Lợn", "Trâu"];
+    let arrayEnglish = ["Cow", "Pig", "Chicken", "Dog", "Fish", "Pig", "Buffalow"];
+    // let checkLanguage = document.getElementById("fromLanguage").value;
+
+    function translateClick() {
+        let fromTxt = document.getElementById("originalTxt").value;
+        // if (checkLanguage === "vietnam") {
+            let i = arrayVietnam.indexOf(fromTxt)
+            document.getElementById("result").innerHTML = arrayEnglish[i];
+        // } else {
+        //     let i = arrayEnglish.indexOf(fromTxt)
+        //     document.getElementById("result").innerHTML = arrayVietnam[i];
+        // }
+    }
+
+</script>
+</html>
