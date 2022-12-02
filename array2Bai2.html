@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inputArray = [];
+    let result;
+    for (let i = 0; ; i++) {
+        let item = prompt('Nhập giá trị của mãng tại vị trí ' + i + ' (Gõ "STOP" để dừng)');
+        if (item === "STOP") {
+            break;
+        }
+        inputArray.push(item);
+    }
+    result = inputArray.reverse();
+    for (let i = 0; i < result.length; i++) {
+        document.write(result[i])
+    }
+</script>
+</html>
