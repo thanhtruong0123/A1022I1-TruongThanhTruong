@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inputArray1 = [];
+    let inputArray2 = [];
+    let resultArray;
+
+    for (let i = 0; i < 10; i++) {
+        inputArray1[i] = +prompt("Nhập giá trị của mãng 1 tại vị trí " + i);
+    }
+    for (let i = 0; i < 10; i++) {
+        inputArray2[i] = +prompt("Nhập giá trị của mãng 2 tại vị trí " + i);
+    }
+
+    resultArray = inputArray1.concat(inputArray2);
+
+    document.write(resultArray);
+
+</script>
+</html>
