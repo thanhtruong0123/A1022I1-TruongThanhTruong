@@ -9,11 +9,22 @@
 </body>
 <script>
     let inputArray = [];
-    let newArray;
     for (let i = 0; i < 10; i++) {
         inputArray[i] = +prompt("Nhập giá trị của mãng tại vị trí " + i);
     }
-    newArray = inputArray.reverse();
-    document.write(newArray);
+
+    let index;
+    let result;
+    for (let i = 0; i < 10; i++) {
+        let max = inputArray[0];
+        for (let j = 1; j < inputArray.length; j++) {
+            if (max < inputArray[j]) {
+                max = inputArray[j]
+            }
+        }
+        index = inputArray.indexOf(max);
+        result = inputArray.splice(index, 1);
+        document.write(result + "<br/>");
+    }
 </script>
 </html>
