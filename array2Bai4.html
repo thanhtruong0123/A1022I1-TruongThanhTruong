@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> Đếm Số Từ Trong 1 Chuỗi </h3>
+</body>
+<script>
+    let inputString = prompt("Hãy nhập 1 chuỗi bất kỳ");
+    let count = 1;
+    for (let i = 0; i < inputString.length; i++) {
+        if (inputString[i] === " ") {
+            count++;
+        }
+    }
+    document.write("Số Từ Trong Chuỗi Là: " + count);
+</script>
+</html>
