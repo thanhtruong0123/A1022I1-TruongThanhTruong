@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-
+    <h3> Thay Thế "-" Thành "_" </h3>
 </body>
+<script>
+    let inputString = prompt("Nhập 1 mảng ký tự");
+
+    for (let i = 0; i < inputString.length; i++) {
+        if (inputString[i] === "-") {
+            document.write("_");
+        } else {
+            document.write(inputString[i]);
+        }
+    }
+</script>
 </html>
