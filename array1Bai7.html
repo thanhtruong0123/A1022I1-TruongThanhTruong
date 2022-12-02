@@ -10,10 +10,10 @@
 <script>
     let inputArray = [];
     let index;
-    for (let i = 0; i < ; i++) {
+    for (let i = 0; i < 10; i++) {
         inputArray[i] = +prompt("Nhập giá trị của mãng tại vị trí " + i);
     }
-    let v = +prompt("Nhập Số V Bạn Muốn Kiểm Tra");10
+    let v = +prompt("Nhập Số V Bạn Muốn Kiểm Tra");
     if (inputArray.includes(v)) {
         index = inputArray.indexOf(v);
         inputArray.splice(index, 1);
