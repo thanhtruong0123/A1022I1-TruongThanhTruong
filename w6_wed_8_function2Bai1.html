@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> Square Caculator App </h3>
+    <span> Số bạn muốn tăng </span>
+    <input id="numberId" onInput="square(this.value) onChange(this.value)" />
+    <span> Bình phương là </span>
+    <span id="result"></span>
+</body>
+<script>
+    function square(number) {
+        return number*number;
+    }
+    let inputNumber = +prompt("Nhập Số Bạn Muốn Tìm Bình Phương.");
+    let result = square(inputNumber);
+    alert(result);
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let starArray = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellationArray = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function findStar(star) {
+        let result;
+        for (let i = 0; i < starArray.length; i++) {
+            if (starArray[i] === star) {
+                result = constellationArray[i];
+                break;
+            } else {
+                result = "Hệ Thống Không Lưu Trữ Ngôi Sao Này."
+            }
+        }
+        return result;
+    }
+    let inputStar = prompt("Nhập Ngôi Sao Bạn Muốn Tìm Chòm Sao Tương Ứng.");
+    let theResult = findStar(inputStar);
+    alert(theResult);
+</script>
+</html>

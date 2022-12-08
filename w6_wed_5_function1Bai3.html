@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function showMessage(x, y) {
+        let result;
+        if (x > y) {
+            result = "Tham số thứ nhất LỚN HƠN tham số thứ 2";
+        } else {
+            result = x + y;
+        }
+        return result;
+    }
+    let firstInput = +prompt("Nhập tham số thứ nhất");
+    let secondInput = +prompt("Nhập tham số thứ hai");
+    let theResult = showMessage(firstInput, secondInput);
+
+    alert(theResult);
+</script>
+</html>

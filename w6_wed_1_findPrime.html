@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function isPrime(number) {
+        let result = true;
+        if (number === 2) {
+            result = true;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number%i === 0) {
+                    result = false;
+                    break;
+                }
+            }
+        }
+        if (result) {
+            result = "Đây là SỐ NGUYÊN TỐ";
+        } else {
+            result = "Đây KHÔNG phải là SỐ NGUYÊN TỐ";
+        }
+        return result;
+    }
+    let inputNumber = +prompt("Nhập số bạn muốn kiểm tra có phải SỐ NGUYÊN TỐ");
+    let result = isPrime(inputNumber);
+    alert(result);
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> Converter between Feet and Meters </h3>
+    <table>
+        <tr>
+            <td> Feet: </td>
+            <td>
+                <input type="number" id="valueFoot"
+                       oninput="footToMeter(this.value)"
+                       onchange="footToMeter(this.value)" />
+            </td>
+            <td> to Meters: </td>
+            <td id="resultMeter"> </td>
+        </tr>
+        <tr>
+            <td> Meter:</td>
+            <td>
+                <input type="number" id="valueMeter"
+                       oninput="meterToFoot(this.value)"
+                       onchange="meterToFoot(this.value)" />
+            </td>
+            <td> to Feet: </td>
+            <td id="resultFoot"> </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function footToMeter(foot) {
+        return meter = document.getElementById("resultMeter").innerHTML = 0.305 * foot;
+    }
+    function meterToFoot(meter) {
+        return foot = document.getElementById("resultFoot").innerHTML = 3.279 * meter;
+    }
+</script>
+</html>
