@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function isPositiveInteger(number) {
+        let result = false;
+        if (number > 0) {
+            result = true;
+        }
+        return result;
+    }
+    let inputNumber = +prompt("Nhập số bạn cần kiểm tra có nguyên dương không");
+    alert(isPositiveInteger(inputNumber));
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number1 = +prompt("Nhập số thứ nhất");
+    let number2 = +prompt("Nhập số thứ 2");
+    let number3 = +prompt("Nhập số thứ 3");
+
+    function findMin(firstN, secondN, thirdN) {
+        let min = firstN;
+        if (min >= secondN) {
+            min = secondN;
+            if (min >= thirdN) {
+                min = thirdN;
+            }
+        } else if (min >= thirdN) {
+            min = thirdN;
+        }
+        return min;
+    }
+    let result = findMin(number1, number2, number3);
+    alert("Số Bé Nhất Là: " + result);
+</script>
+</html>

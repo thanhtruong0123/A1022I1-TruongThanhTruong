@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function changeArray(array) {
+        let first = 0;
+        let last = array.length - 1;
+        let holdNum;
+        while (first < last) {
+            holdNum = array[first];
+            array[first] = array[last];
+            array[last] = holdNum;
+            first++;
+            last--;
+        }
+        return array;
+    }
+    let inputArray = [];
+    inputArray.length = +prompt("Nhập chiều dài của Mảng");
+    for (let i = 0; i < inputArray.length; i++) {
+        inputArray[i] = +prompt("Nhập Giá Trị của Mảng tại vị trí " + i);
+    }
+    alert(changeArray(inputArray));
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function is_Character_In_Array(array, character) {
+        let result;
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === character) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            result = count;
+        } else {
+            result = -1;
+        }
+        return result;
+    }
+    let inputCharacter = prompt("Nhập Ký Tự Cần Kiểm Tra");
+    let inputArray = prompt("Nhập Mảng Ký Tự");
+    alert(is_Character_In_Array(inputArray, inputCharacter));
+</script>
+</html>

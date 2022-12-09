@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> APP Kiểm Tra Có Phải Ký Tự Không </h3>
+    <table>
+        <tr>
+            <td> Ký Tự Cần Kiểm Tra </td>
+            <td>
+                <input type="text" placeholder="Nhập Ký Tự"
+                       onInput="isCharacter(this.value)" />
+            </td>
+        </tr>
+        <tr>
+            <td> <b> Kết quả:  </b></td>
+            <td id="lastResult"></td>
+        </tr>
+    </table>
+</body>
+<script>
+    function isCharacter(inputText) {
+        let result = false;
+        if (inputText.length === 1) {
+            result = true;
+        }
+        return document.getElementById("lastResult").innerHTML = result;
+    }
+</script>
+</html>

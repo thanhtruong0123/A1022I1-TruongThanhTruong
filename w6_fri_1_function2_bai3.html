@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> APP Tính Giai Thừa </h3>
+    <table>
+        <tr>
+            <td> Số Cần Tính </td>
+            <td>
+                <input type="number" placeholder="Nhập Số"
+                       onInput="factorial_Function(this.value)" />
+            </td>
+        </tr>
+        <tr>
+            <td> <b> Kết quả:  </b></td>
+            <td id="result_factorial"></td>
+        </tr>
+    </table>
+<script>
+    function factorial_Function(number) {
+        let factorial = 1;
+        let result = "";
+        let lastResult;
+        for (let i = 1; i <= number; i++) {
+            factorial *= i;
+            result += i + "*"
+        }
+        return lastResult = document.getElementById("result_factorial").innerHTML = result + "=" + factorial;
+    }
+</script>
+</html>
