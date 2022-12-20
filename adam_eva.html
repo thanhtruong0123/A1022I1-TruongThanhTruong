@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <b> Apple </b>
+    <p id="appleId"></p>
+    <b> Adam </b>
+    <button type="button" id="adamButton" onclick="Apple(this.decrease())"> Eat </button>
+    <p id="adamId"></p>
+    <b> Eva </b>
+    <button type="button" id="evaButton" onclick="Apple(this.decrease())"> Eat </button>
+    <p id="evaId"></p>
+</body>
+<script>
+    let Apple = function(weight) {
+        this.weight = weight;
+        this.decrease = function() {
+            return 1;
+        }
+        this.getWeight = function() {
+            return this.weight - this.decrease;
+        }
+        this.isEmpty = function() {
+            if (this.getWeight === 0) {
+                return document.write("Táo Đã Hết");
+            } else {
+                return document.write("")
+            }
+        }
+        this.showApple = function() {
+            return document.getElementById("appleId").innerHTML =
+                "Weight: " + this.getWeight
+                + this.isEmpty;
+        }
+    }
+    let Human = function(name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+    }
+</script>
+</html>
