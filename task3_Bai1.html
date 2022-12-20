@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr_A = [];
+    arr_A.length = +prompt("Enter the length of Array A.");
+    for (let i = 0; i < arr_A.length; i++) {
+        arr_A[i] = +prompt("Enter the value of Array A in positions " + i);
+    }
+    let arr_B = [];
+    let value = 0;
+    for (let i = 0; i < arr_A.length; i++) {
+        value += arr_A[i];
+        arr_B[i] = value;
+    }
+    document.write("Array A is: " + arr_A + "</br>");
+    document.write("Array B is: " + arr_B);
+</script>
+</html>
