@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let Temperature = function(celsius) {
+        this.celsius = celsius;
+        this.getFahrenheit = function() {
+            return celsius*(9/5) + 32;
+        }
+        this.getKelvin = function() {
+            return (this.getFahrenheit()-32)*(5/9) + 273.15;
+        }
+        this.showMessage = function() {
+            return "Fahrenheit: " + this.getFahrenheit() + "</br>"
+                  + "Kelvin: " + this.getKelvin();
+        }
+    }
+    let inputCelsius = +prompt("Enter the Celsius Temperature.");
+    let temperature = new Temperature(inputCelsius);
+    document.write(temperature.showMessage());
+</script>
+</html>
