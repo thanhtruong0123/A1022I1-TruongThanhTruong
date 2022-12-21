@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrA = [];
+    arrA.length = +prompt("Enter the length of array A");
+    for (let i = 0; i < arrA.length; i++) {
+        arrA[i] = +prompt("Enter the value of Array A at positions " + i);
+    }
+    let arrB = [];
+    arrB.length = +prompt("Enter the length of array B");
+    for (let i = 0; i < arrB.length; i++) {
+        arrB[i] = +prompt("Enter the value of Array B at positions " + i);
+    }
+    let arrC = [];
+    let count = 0;
+    for (let i = 0; i < arrB.length; i++) {
+        for (let j = 0; j < arrA.length; j++) {
+            if (arrB[i]===arrA[j]) {
+                arrC[count] = arrB[i];
+                count++;
+            }
+        }
+    }
+    for (let i = 0; i < arrC.length; i++) {
+        arrB.splice(arrB.indexOf(arrC[i]),1);
+    }
+    document.write("Missing Value is: " + arrB);
+
+</script>
+</html>
