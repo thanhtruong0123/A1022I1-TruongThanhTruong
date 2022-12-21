@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let h = +prompt("Enter the height of triangle.");
+    for (let i = 1; i <= h; i++) {
+        for (let j = h; j > i; j--) {
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let j = 0; j <= i; j++) {
+            if (i!==h) {
+                if (j==0) {
+                    document.write("*");
+                } else if (j==i) {
+                    if (i!==1) {
+                        document.write("*");
+                    } else {
+                        document.write("&nbsp;&nbsp;");
+                    }
+                } else {
+                    if (j==1) {
+                        document.write("&nbsp;&nbsp;");
+                    } else {
+                        document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+                    }
+                }
+            } else {
+                if (j==0 || j==1 || j==2) {
+                    document.write("*");
+                } else {
+                    document.write("**");
+                }
+            }
+        }
+        document.write("</br>");
+    }
+</script>
+</html>
