@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            background-color:#FFC6D3;
+            text-align:center;
+        }
+        button {
+            background-color: #E98EAD;
+            border-radius: 8px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 50px;
+            width: 75%;
+            margin: 0;
+            padding: 10px 16px;
+            position: relative;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="3" style="color:#3A4F7A;font-size: 25px;font-family:Pacifico;">
+                <h3> MENU </h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="1" value="1" onclick="cafe_drink(this.value)"> 1. Cafe </button>
+            </td>
+            <td>
+                <button type="button" id="1" value="1" onclick="orange_drink(this.value)"> 2. Cam vắt </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="1" value="1" onclick="carrot_drink(this.value)"> 3. Nước ép cà rốt </button>
+            </td>
+            <td>
+                <button type="button" id="4" value="1" onclick="tomato_drink(this.value)"> 4. Nước ép cà chua </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="5" value="1" onclick="water_drink(this.value)"> 5. Nước lọc </button>
+            </td>
+            <td>
+                <button type="button" id="6" value="1" onclick="coconut_drink(this.value)"> 6. Nước dừa </button>
+            </td>
+        </tr>
+        <tr>
+
+            <td colspan="2" style="height:50px" >
+               <input type="number" id="listPrice" style="width:230px"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"> <hr style="background-color:white; border-color:white"> </td>
+        </tr>
+        <tr>
+            <td style="color:#3A4F7A; height:50px">
+                <b> Price: </b>
+            </td>
+            <td>
+                <input type="number" id="result" style="width:100px"/>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function cafe_drink(number) {
+        let quantity += number;
+        return document.getElementById("result").innerHTML = quantity * 15000;
+    }
+</script>
+</html>
