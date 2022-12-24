@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button type="button" onclick="switchOn()"> Bật Đèn </button>
+    <button type="button" onclick="switchOff()"> Tắt Đèn </button>
+</body>
+<script>
+    let SwitchButton = function(status) {
+        this.status = status;
+        this.switchOn = function {
+            return "On";
+        }
+        this.switchOff = function {
+            return "Off";
+        }
+    }
+    let ElectricLamp extend SwitchButton = function(status,lamp) {
+        super.getStatus = function() {
+            if (this.switchOn == "On") {
+                return this.lamp = "Turn On";
+            } else {
+                return this.lamp = "Turn Off";
+            }
+        }
+    }
+</script>
+</html>
