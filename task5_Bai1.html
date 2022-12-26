@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function total(m,n) {
+        let arr = [[]];
+        for (let i = 0; i < m; i++) {
+            arr[i] = [];
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = +prompt("Enter the value of array at row " + i + " column " + j);
+            }
+        }
+        document.write("<table style='width:100px'>")
+            for (let i = 0; i < m; i++) {
+                document.write("<tr>")
+                for (let j = 0; j < n; j++) {
+                    document.write("<td>" + arr[i][j] + "</td>");
+                }
+                document.write("<td>")
+            }
+        document.write("</table>")
+
+        let result = 0;
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if (arr[i][j] % 2 === 0) {
+                    result += arr[i][j];
+                }
+            }
+        }
+        document.write("Total of all even number is: " + result);
+    }
+    let rowLength = +prompt("Enter the length of row");
+    let columnLength = +prompt("Enter the length of column");
+    let result = total(rowLength, columnLength)
+</script>
+</html>
