@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function total(m,n) {
+        let arr = [[]];
+        for (let i = 0; i < m; i++) {
+            arr[i] = [];
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = +prompt("Enter the value of array at row " + i + " column " + j);
+            }
+        }
+        document.write("<table style='width:100px'>")
+        for (let i = 0; i < m; i++) {
+            document.write("<tr>")
+            for (let j = 0; j < n; j++) {
+                document.write("<td>" + arr[i][j] + "</td>");
+            }
+            document.write("<td>")
+        }
+        document.write("</table>")
+
+        let count = 0;
+        let resultArr = [];
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if(isPrimeFunction(arr[i][j])) {
+                    resultArr.push(arr[i][j]);
+                    count++;
+                }
+            }
+        }
+        document.write("There is " + count + " prime number, and they're " + resultArr);
+    }
+    function isPrimeFunction(number) {
+        let isPrime = true;
+        if (number <= 1) {
+            isPrime = false;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        return isPrime;
+    }
+    let rowLength = +prompt("Enter the length of row");
+    let columnLength = +prompt("Enter the length of column");
+    let result = total(rowLength, columnLength)
+</script>
+</html>
