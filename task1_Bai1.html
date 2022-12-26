@@ -17,7 +17,7 @@
         } else {
             tax = (20 * income)/100;
         }
-        return tax + "VND";
+        return tax + "VND; Net Salary: " + (income - tax);
     }
     let inputIncome = +prompt("Enter your salary:");
     let result = caculatorTax(inputIncome);
