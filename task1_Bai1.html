@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function caculatorTax(income) {
+        let tax;
+        if (income < 7000000) {
+            tax = (5 * income)/100;
+        } else if (income < 15000000) {
+            tax = (10 * income)/100;
+        } else {
+            tax = (20 * income)/100;
+        }
+        return tax + "VND";
+    }
+    let inputIncome = +prompt("Enter your salary:");
+    let result = caculatorTax(inputIncome);
+    alert(result);
+</script>
+</html>
