@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function isVowel(char) {
+        vowels = ["o", "u", "i", "e", "a"];
+        if (vowels.includes(char.toLowerCase())) {
+            return char + " is a vowel";
+        } else {
+            return char + " is not a vowel";
+        }
+    }
+    let inputChar = prompt("Enter a character.");
+    let theResult = isVowel(inputChar);
+    alert(theResult);
+</script>
+</html>
