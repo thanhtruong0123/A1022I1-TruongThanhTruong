@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inputString = prompt("Enter a string");
+    let resultArr = [];
+    let count = 0;
+    for (let i = 0; i < inputString.length; i++) {
+        if (resultArr.indexOf(inputString[i]) === -1) {
+            resultArr.push(inputString[i]);
+            count++;
+        }
+    }
+    document.write("There is " + count + " different character, and they're " + resultArr);
+</script>
+</html>
