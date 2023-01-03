@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+            border: 1px solid silver;
+            width: 900px;
+            height: 50px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="addStudent(); showListStudents()"> Thêm mới học viên </button>
+    <button type="button" onclick="editStudent();"> Sửa thông tin học viên </button>
+    <button type="button" onclick="deleteStudent();"> Xóa học viên </button>
+    <p> &nbsp;</p>
+
+    <div id="list-students"></div>
+</body>
+<script>
+    class Student {
+        contructor(id, name, className, email, birthday, module) {
+            this.id = id;
+            this.name = name;
+            this.className = className;
+            this.email = email;
+            this.birthday = birthday;
+            this.module = module;
+        }
+    }
+
+    let students = [];
+
+    function showListStudents() {
+        let str = '<table>';
+        str += `
+            <tr>
+                <th> Mã học viên </th>
+                <th> Tên </th>
+                <th> Lớp </th>
+                <th> Email </th>
+                <th> Ngày sinh </th>
+                <th> Module </th>
+            </tr>
+        `;
+
+        for (let i = 0; i < students.length; i++) {
+            str += `
+                <tr>
+                    <td>
+                        ${students[i].id}
+                    </td>
+                    <td>
+                        ${students[i].name}
+                    </td>
+                    <td>
+                        ${students[i].className}
+                    </td>
+                    <td>
+                        ${students[i].birthday}
+                    </td>
+                    <td>
+                        ${students[i].module}
+                    </td>
+                </tr>
+            `;
+        }
+
+        str += '</table>';
+
+        document.getElementById('list-students').innerHTML = str;
+    }
+
+    function addStudent() {
+        let student = new Student();
+
+        const id = prompt("Nhập mã học viên");
+        student.id = id;
+
+        const name = prompt("Nhập tên học viên");
+        student.name = name;
+
+        const className = prompt("Nhập lớp học viên");
+        student.className = className;
+
+        const birthday = prompt("Nhập ngày sinh học viên");
+        student.birthday = birthday;
+
+        const module = prompt("Nhập module học viên");
+        student.module = module;
+
+        students.push(student);
+    }
+
+    function editStudent() {
+        let editId = prompt('Nhập Mã học viên bạn muốn thay đổi');
+        for (let i = 0; i < students.length; i++) {
+            if (editId == students[i].id) {
+
+                let editName = prompt("Nhập tên MỚI cho học viên");
+                students[i].name = editName;
+
+                let editClassName = prompt("Nhập lớp MỚI cho học viên");
+                students[i].className = editClassName;
+
+                let editEmail = prompt("Nhập email MỚI cho học viên");
+                students[i].email = editEmail;
+
+                let editBirthday = prompt("Nhập ngày sinh MỚI cho học viên");
+                students[i].birthday = editBirthday;
+
+                let editModule = prompt("Nhập Module MỚI cho học viên");
+                students[i].module = editModule;
+            }
+
+            showListStudents();
+        }
+    }
+
+    function deleteStudent() {
+        let deleteId = prompt("Nhập Mã học viên bạn muốn xóa");
+        for (let i = 0; i < students.length; i++) {
+            if (deleteId == students[i].id) {
+                students.splice(i, 1);
+                showListStudents();
+            }
+        }
+    }
+
+</script>
+</html>
