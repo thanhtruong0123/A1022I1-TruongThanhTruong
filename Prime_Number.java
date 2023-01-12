@@ -10,17 +10,18 @@ public class Prime_Number {
         int number =  sc.nextInt();
 
         for (int i = 0; ; i++) {
-            for (int j = 2; j < i; j++) {
+            int checkNum = 0;
+            for (int j = 1; j <= i; j++) {
                 if (i % j == 0) {
-                    break;
-                } else {
-                    System.out.print(i + ", ");
-                    count++;
-                    break;
+                    checkNum++;
                 }
             }
-            if (count > number) {
-                break;
+            if (checkNum == 2) {
+                System.out.print(i + " ");
+                count++;
+                if (count > number) {
+                    break;
+                }
             }
         }
     }
