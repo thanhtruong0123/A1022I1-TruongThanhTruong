@@ -11,7 +11,9 @@ public class Prime_Number {
 
         for (int i = 0; ; i++) {
             for (int j = 2; j < i; j++) {
-                if (i % j != 0) {
+                if (i % j == 0) {
+                    break;
+                } else {
                     System.out.print(i + ", ");
                     count++;
                     break;
