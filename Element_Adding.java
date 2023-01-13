@@ -25,13 +25,22 @@ public class Element_Adding {
             System.out.print(arr[i] + " ");
         }
 
-        arr[positions] = newValue;
+        int[] newArr = new int[length+1];
+        for (int i = 0; i < positions; i++) {
+            newArr[i] = arr[i];
+        }
+
+        newArr[positions] = newValue;
+
+        for (int i = positions; i < arr.length; i++) {
+            newArr[i+1] = arr[i];
+        }
 
         System.out.println("");
 
         System.out.println("Mảng mới");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int i = 0; i < newArr.length; i++) {
+            System.out.print(newArr[i] + " ");
         }
     }
 }
